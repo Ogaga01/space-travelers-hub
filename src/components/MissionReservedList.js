@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 const MissionReservedList = () => {
     const missions = useSelector((state)=>{return state.missionSlice.missions})
 
-    const joinedMissions = missions.filter((mission)=>{return mission.joined = true})
+    const joinedMissions = missions.filter((mission)=>{return mission.joined})
 
     return (
       <div className="my-profile-item">
@@ -18,7 +18,7 @@ const MissionReservedList = () => {
                 const count = index;
                 return (
                   <tr key={count}>
-                    <td className="my-profil-mission">{mission.missionName}</td>
+                    <td className="my-profil-mission">{mission.name}</td>
                   </tr>
                 );
               })}
