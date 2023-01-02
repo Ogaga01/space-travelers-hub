@@ -8,24 +8,6 @@ const RocketData = (props) => {
 
     const { image, name, description, reserved, id} = props.rocket
 
-    const fetchRocketData = async () => {
-        const response = await fetch("https://api.spacexdata.com/v3/rockets");
-        const data = await response.json()
-        
-        data.forEach((el) => {
-            const rocket = {
-                id: el.id,
-                rocket_name: el.name,
-                description: el.description,
-                image: el.flickr_images[0],
-                reserved: false,
-            }
-
-            dispatch(rocketActions.addRocket(rocket))
-        })
-    }
-    fetchRocketData()
-
     const addReservation = () => {
         dispatch(rocketActions.reserveRocket(id))
     }
