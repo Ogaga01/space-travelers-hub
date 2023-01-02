@@ -6,7 +6,7 @@ import styles from '../sass/_rocketdata.module.scss'
 const RocketData = (props) => {
     const dispatch = useDispatch()
 
-    const { image, name, description, reserved, id} = props.rocket
+    const { image, rocket_name, description, reserved, id} = props.rocket
 
     const addReservation = () => {
         dispatch(rocketActions.reserveRocket(id))
@@ -17,13 +17,13 @@ const RocketData = (props) => {
     };
 
     return (
-      <li>
+      <li className={styles.list}>
         <img src={image} alt="Rocket" className={styles["rocket-image"]} />
         <div>
-          <h1 className={styles.name}>{name}</h1>
+          <h1 className={styles.name}>{rocket_name}</h1>
           {reserved ? (
             <>
-              <span className="span">Reserved</span>{" "}
+              <span className={styles.span}>Reserved</span>
               <p className={styles.description}>{description}</p>
             </>
           ) : (

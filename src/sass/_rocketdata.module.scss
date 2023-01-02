@@ -1,4 +1,47 @@
 @import './mixins';
 @import './variables';
 
-.
+.list {
+    display: flex;
+    width: 90%;
+    margin: 5rem auto;
+}
+
+.rocket-image {
+    height: 18rem;
+    width: 15%;
+    margin-right: 5rem;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+    margin: 2rem 0;
+}
+
+.reserve {
+    color: #fff;
+    background-color: $color-blue;
+    padding: 1.2rem;
+    border: none;
+}
+
+.cancel {
+   color: $color-grey;
+    background-color: #fff;
+    padding: 1.2rem; 
+    border: .1rem solid black;
+}
+
+.span {
+    color: #fff;
+    background-color: $color-green;
+    padding: 1rem;
+}
