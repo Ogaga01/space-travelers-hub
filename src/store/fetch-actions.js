@@ -1,3 +1,4 @@
+import { missionActions } from "./Mission";
 import { rocketActions } from "./Rocket";
 
 export const fetchRocketData = () => {
@@ -33,6 +34,8 @@ export const fetchMissionData = () => {
         description: el.description,
         joined: false
       }
+
+      dispatch(missionActions.addMission(mission))
     })
   }
 }
