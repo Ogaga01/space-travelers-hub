@@ -20,8 +20,8 @@ const MissionData = (props) => {
         <tr>
       <td className={styles.name}><b>{name}</b></td>
       <td className={styles.description}>{description}</td>
-            <td className={styles.member}>{!joined && <p>Not a member</p>}
-            {joined && <p>Active Member</p>}
+            <td className={styles.member}>{!joined && <p className={styles['not-active']}>Not a member</p>}
+            {joined && <p className={styles.active}>Active Member</p>}
             </td>
       <td className={styles.joined}>
                 {joined && <button className={styles.leave} onClick={leaveMission}>Leave Mission</button>}

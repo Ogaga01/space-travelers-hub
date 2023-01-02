@@ -1,0 +1,49 @@
+@import './mixins';
+@import './variables';
+
+.name {
+    width: 10%;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.member {
+    width: 10%;
+    font-size: 1.5rem;
+}
+
+.joined {
+    width: 10%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.description {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.join {
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.leave {
+    color: $color-red;
+    border: .1rem solid $color-red;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.not-active {
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $color-grey;
+    padding: .1rem;
+}
+
+.active {
+    color: #fff;
+    background-color: $color-blue;
+    padding: .5rem;
+}
