@@ -19,3 +19,20 @@ export const fetchRocketData = () => {
     });
   };
 };
+
+export const fetchMissionData = () => {
+  return async (dispatch) => {
+    const response = await fetch('https://api.spacexdata.com/v3/missions')
+    const data = await response.json()
+    console.log(data)
+
+    data.forEach((el) => {
+      const mission = {
+        id: el.mission_id,
+        name: el.mission_name,
+        description: el.description,
+        joined: false
+      }
+    })
+  }
+}

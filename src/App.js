@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import Navbar from "./components/Navbar";
-import { fetchRocketData } from "./store/fetch-actions";
+import { fetchMissionData, fetchRocketData } from "./store/fetch-actions";
 
 function App() {
   const dispatch = useDispatch()
@@ -9,6 +9,11 @@ function App() {
   useEffect(() => {
     dispatch(fetchRocketData())
   }, [dispatch])
+
+  useEffect(() => {
+    dispatch(fetchMissionData());
+  }, [dispatch]);
+
   return (
     <>
       <Navbar />
