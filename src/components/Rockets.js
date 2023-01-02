@@ -1,18 +1,11 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchRocketData } from "../store/fetch-actions";
+import React from "react";
+import { useSelector } from "react-redux";
 import RocketData from "./RocketData";
 
 const Rockets = () => {
   const rockets = useSelector((state) => {
     return state.rocketSlice.rockets;
   });
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchRocketData());
-  }, [dispatch]);
 
     return <ul>
         {rockets.map((rocket) => {
